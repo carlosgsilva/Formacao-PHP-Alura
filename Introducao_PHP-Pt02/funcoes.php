@@ -21,9 +21,14 @@ function depositar ($conta, float $valor) {
 }
 
 function exibirMensagem ($mesagem) {
-  echo $mesagem . PHP_EOL;
+  echo $mesagem . '<br>';
 }
 
 function titularComLetraMaiuscula (array &$conta) {
   $conta['titular'] = strtoupper($conta['titular']);
+}
+
+function exibeConta(array $conta) {
+  ['titular' => $titular, 'saldo' => $saldo] = $conta;
+  echo "<li> Titular: $titular . Saldo: $saldo</li>";
 }
